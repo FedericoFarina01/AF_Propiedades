@@ -1,0 +1,272 @@
+/* BOTÓN DE WHATSAPP */
+.boton-whatsapp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #40C351;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: background 0.3s;
+}
+
+.boton-whatsapp:hover {
+    text-decoration: none;
+    background: #FCFCFD;
+}
+
+/*-------------------------------------- NAV---------------------------------------- */
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+/* Eliminar el padding del contenedor del navbar */
+.navbar .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Asegurar que el navbar ocupe todo el ancho */
+.navbar-expand-lg {
+    width: 100%;
+}
+
+/* Centrar el título en el navbar */
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: #4f1d27; /* Color fijo de texto para el título */
+    width: 100%; /* Asegura que ocupe todo el ancho del navbar */
+    transition: color 0.3s ease; /* Para transiciones suaves si quieres */
+}
+
+/* Evitar que cambie de color al pasar el mouse */
+.navbar-brand:hover {
+    color: #4f1d27; /* Mantén el mismo color que en el estado normal */
+}
+
+/* Personalización del botón del menú hamburguesa */
+.navbar-toggler {
+    border: none; /* Elimina el borde predeterminado */
+    background-color: transparent; /* Fondo transparente */
+    padding: 0.5rem;
+    margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+/* Personalización del ícono del menú hamburguesa */
+.navbar-toggler-icon {
+    background-image: none; /* Elimina el ícono predeterminado */
+    width: 30px;
+    height: 3px;
+    background-color: #4f1d27; /* Color del ícono */
+    position: relative;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Crear las tres líneas del menú hamburguesa */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #4f1d27; /* Color del ícono */
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px; /* Posición de la línea superior */
+}
+
+.navbar-toggler-icon::after {
+    top: 8px; /* Posición de la línea inferior */
+}
+
+/* Estilo del menú desplegado */
+.navbar-collapse {
+    background-color: #4f1d27; /* Fondo del menú desplegado */
+    padding: 1rem;
+}
+
+/* Estilo de los enlaces del menú desplegado */
+.navbar-nav .nav-link {
+    color: #fff; /* Color del texto */
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    text-align: center; /* Centrar el texto */
+    display: block; /* Hacer que los enlaces ocupen todo el ancho */
+}
+
+/* Líneas separadoras entre los enlaces del menú desplegado */
+.navbar-nav .nav-item {
+    border-bottom: 2px solid #fff; /* Línea blanca más gruesa */
+}
+
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.2rem; /* Tamaño del título */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Estilo para pantallas más grandes (menú oculto por defecto) */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: none; /* Oculta el menú por defecto */
+    }
+
+    .navbar-toggler {
+        display: block; /* Muestra el botón de hamburguesa */
+    }
+
+    /* Muestra el menú al hacer clic en el botón de hamburguesa */
+    .navbar-collapse.collapse.show {
+        display: block; /* Muestra el menú desplegado */
+        position: absolute;
+        top: 100%; /* Coloca el menú debajo del navbar */
+        right: 0;
+        background-color: #4f1d27; /* Fondo oscuro */
+        padding: 1rem;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Menú vertical */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        margin-top: 10px;
+        border-bottom: 2px solid #fff; /* Línea blanca más gruesa */
+    }
+
+}
+
+
+
+/* Asegurar que el body ocupe toda la altura de la ventana */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El main ocupa el espacio restante */
+.main-container {
+    flex: 1;
+}
+
+
+
+/* BODY*/
+
+body{
+    background-color: #4f1d27;
+}
+
+
+
+/* Estilo del footer */
+.footer {
+    background-color: #fff; /* Fondo vinotinto */
+    padding: 10px 20px; /* Reducir el padding vertical */
+    text-align: center;
+    height: auto; /* Altura automática */
+    display: flex; /* Usar Flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Contenedor de la dirección */
+.direccion-footer {
+    text-align: center; /* Alinear el texto a la izquierda */
+}
+
+/* Contenedor del contacto */
+.contacto-footer {
+    text-align: center; /* Alinear el texto a la derecha */
+}
+
+/* Estilo de los enlaces */
+.dir-footer a,
+.tel-footer a {
+    color: #4f1d27;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Logo del footer */
+.logo-footer {
+    width: 60px; /* Reducir el tamaño del logo */
+    height: auto;
+    margin: 0 10px; /* Reducir el margen lateral */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        padding: 10px; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .direccion-footer,
+    .contacto-footer {
+        text-align: center; /* Centrar el texto en pantallas pequeñas */
+        margin-bottom: 10px; /* Espaciado entre secciones */
+    }
+
+    .logo-footer {
+        margin-bottom: 5px; /* Ajustar el margen en pantallas pequeñas */
+    }
+}
+
+
+
+/*IMAGENES*/
+
+/* Estilo del logo en el navbar */
+.logo {
+    width: 120px; /* Ancho del logo */
+    height: 80px; /* Alto del logo */
+    position: absolute; /* Posición absoluta */
+    left: 20px; /* Distancia desde la izquierda */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste fino para centrar */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+@media (max-width: 768px){
+    .logo {
+        display: none
+    }
+}
