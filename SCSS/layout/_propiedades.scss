@@ -1,0 +1,39 @@
+/*---------------------------PROPIEDADES---------------------------------*/
+.main-container-propiedades {
+    height: 100vh; /* Asegura que el main ocupe toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+}
+
+.left-half {
+    background-color: #fff; /* Color de la mitad izquierda (amarillo) */
+    height: 100vh;
+}
+
+.right-half {
+    background-color: #4f1d27; /* Color de la mitad derecha (azul marino) */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-content {
+    color: white; /* Color del texto en la mitad derecha */
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}

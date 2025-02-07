@@ -48,7 +48,7 @@ body {
 
 /* Título centrado */
 .navbar-brand {
-    font-size: 2rem; /* Reduje el tamaño de la fuente */
+    font-size: 1.5rem; /* Reduje el tamaño de la fuente */
     font-weight: normal; /* Bebas Neue no tiene variantes de peso, usa "normal" */
     color: #4f1d27; /* Texto en color vinotinto */
     text-align: center;
@@ -91,7 +91,7 @@ body {
 
     .navbar-collapse .nav-link {
         color: #fff; /* Texto en blanco en móviles */
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .navbar-nav .nav-item {

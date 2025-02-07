@@ -1,0 +1,122 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Evitar scroll horizontal */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; // Oculta el scroll horizontal
+}
+
+/* Definir la fuente Bebas Neue */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-Regular.ttf') format('truetype'); // Ruta a la fuente
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicar la fuente a todos los textos */
+body {
+    font-family: 'Bebas Neue', sans-serif; // Usa Bebas Neue como fuente principal
+    letter-spacing: 4px; // Espaciado entre letras para todos los textos
+    text-transform: uppercase; // Texto en mayúsculas
+    background-color: #4f1d27; // Fondo vinotinto
+}
+
+
+/* MAIN */
+.main-container {
+    flex: 1; // Asegura que el main ocupe el espacio restante
+    padding: 20px;
+    background-color: #4f1d27; // Fondo vinotinto para el body
+    box-sizing: border-box; // Asegura que el padding no afecte el ancho
+}
+
+/* GRID DE PROPIEDADES */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Columnas responsive
+    gap: 20px; // Espacio entre las tarjetas
+    padding: 20px;
+    box-sizing: border-box; // Asegura que el padding no afecte el ancho
+}
+
+/* TARJETA DE PROPIEDAD */
+.property-card {
+    background-color: #fff; // Fondo blanco para las tarjetas
+    overflow: hidden; // Para que las imágenes no se salgan
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Efecto hover
+
+    &:hover {
+        transform: translateY(-5px); // Efecto de levantar la tarjeta
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Sombra más pronunciada
+    }
+}
+
+/* IMAGEN DE LA PROPIEDAD */
+.property-image {
+    width: 100%;
+    height: 250px; // Altura fija para las imágenes
+    object-fit: cover; // Ajusta la imagen sin deformarla
+    margin-bottom: 10px; // Espacio debajo de la imagen
+}
+
+/* INFORMACIÓN DE LA PROPIEDAD */
+.property-info {
+    padding: 10px; // Reducimos el padding
+    text-align: center;
+
+    h3 {
+        font-size: 1.4rem; // Tamaño del título
+        color: #4f1d27; // Color vinotinto para el título
+        margin-bottom: 8px; // Margen inferior
+        letter-spacing: 3px; // Reduje el espaciado entre letras
+    }
+
+    p {
+        font-size: 0.9rem; // Tamaño de la descripción
+        color: #666; // Color gris para la descripción
+        margin-bottom: 10px; // Margen inferior
+        letter-spacing: 3px; // Reduje el espaciado entre letras
+    }
+}
+
+/* BOTÓN DE VER MÁS */
+.property-button {
+    display: inline-block;
+    padding: 8px 16px; // Padding del botón
+    background-color: #4f1d27; // Fondo vinotinto
+    color: #fff; // Texto blanco
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem; // Tamaño de la fuente
+    transition: background-color 0.3s ease;
+    letter-spacing: 3px; // Reduje el espaciado entre letras
+
+    &:hover {
+        background-color: #3a151d; // Color más oscuro al hacer hover
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .property-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Columnas más pequeñas en móviles
+    }
+
+    .property-info {
+        h3 {
+            font-size: 1.3rem; // Tamaño de fuente más pequeño en móviles
+        }
+
+        p {
+            font-size: 0.9rem; // Tamaño de fuente más pequeño en móviles
+        }
+    }
+}

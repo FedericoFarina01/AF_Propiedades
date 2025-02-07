@@ -1,0 +1,72 @@
+/* NAV */
+.navbar {
+    width: 100%;
+    max-width: 100vw; // Limita el ancho al 100% del viewport
+    background-color: #fff; // Fondo blanco en pantallas grandes
+    padding: 10px 20px; // Añade padding lateral
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; // Asegura que el padding no afecte el ancho
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* Título centrado */
+.navbar-brand {
+    font-size: 1.5rem; // Reduje el tamaño de la fuente
+    font-weight: normal; // Bebas Neue no tiene variantes de peso, usa "normal"
+    color: #4f1d27; // Texto en color vinotinto
+    text-align: center;
+    flex: 1; // Ocupa el espacio restante
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; // Centra el título
+    line-height: 1.2; // Altura de línea
+    letter-spacing: 5px; // Reduje el espaciado entre letras
+}
+
+.navbar-brand:hover {
+    color: #4f1d27; // Mantén el color al hacer hover
+}
+
+/* Botón Menú */
+.boton-menu {
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+/* Menú en pantallas grandes */
+.navbar-nav {
+    .nav-link {
+        color: #4f1d27; // Texto en color vinotinto
+        font-weight: normal; // Bebas Neue no tiene variantes de peso
+        padding: 10px 15px;
+        text-align: center;
+        display: block;
+        font-size: 1.5rem; // Reduje el tamaño de la fuente
+        letter-spacing: 3px; // Reduje el espaciado entre letras
+    }
+}
+
+/* Cambia el color del menú cuando se despliega en pantallas pequeñas */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #4f1d27; // Fondo vinotinto en móviles
+    }
+
+    .navbar-collapse .nav-link {
+        color: #fff; // Texto en blanco en móviles
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav .nav-item {
+        border-bottom: 2px solid #fff; // Borde blanco entre enlaces
+    }
+}
