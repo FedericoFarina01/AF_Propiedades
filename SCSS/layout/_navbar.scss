@@ -1,0 +1,12 @@
+.navbar-nav {
+    margin-left: auto; // Mueve los enlaces de navegación a la derecha
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .navbar-nav {
+        justify-content: flex-end; // Asegura que los enlaces estén centrados a la derecha en pantallas grandes
+    }
+}

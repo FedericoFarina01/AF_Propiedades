@@ -51,3 +51,47 @@
         margin-top: 10px; /* Espaciado arriba del logo en móviles */
     }
 }
+
+@media (min-width: 992px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .direccion-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+        margin-left: 20%; /* Centra entre el medio y la izquierda */
+    }
+
+    .contacto-footer {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right; /* Asegura que el texto esté alineado a la derecha */
+        margin-right: 20%; /* Centra entre el medio y la derecha */
+    }
+
+    .contacto-footer a {
+        font-size: 1.2rem; /* Reduce el tamaño de la fuente del email */
+        margin: 0 10px; /* Espaciado entre el teléfono y el email */
+    }
+}
+
+@media (max-width: 622px) {
+    .direccion-footer a,
+    .contacto-footer a {
+        font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        letter-spacing: 1px; /* Reduce el espaciado entre letras */
+        word-wrap: break-word; /* Permite que el texto pase a la línea siguiente si es necesario */
+    }
+}
+
+@media (max-width: 440px) {
+    .direccion-footer a,
+    .contacto-footer a {
+        font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+        letter-spacing: 0.5px; /* Reduce aún más el espaciado entre letras */
+        word-wrap: break-word; /* Permite que el texto pase a la línea siguiente si es necesario */
+    }
+}
