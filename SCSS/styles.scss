@@ -1,11 +1,12 @@
 // layout
-@import "./layout/contacto";
-@import "./layout/emprendimientos";
-@import "./layout/footer";
 @import "./layout/index";
 @import "./layout/nav";
+@import "./layout/propiedades";
+@import "./layout/footer";
 @import "./layout/nosotros";
+@import "./layout/contacto";
+@import "./layout/emprendimientos";
+
 
 //components
-
 @import "./components/whatsapp";

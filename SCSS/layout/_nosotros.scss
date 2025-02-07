@@ -1,0 +1,65 @@
+/* Definir la fuente Bebas Neue */
+@font-face {
+    font-family: 'Arapey';
+    src: url('../fonts/Arapey-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos solo para la sección Nosotros */
+.main-container-nosotros {
+    background-color: #fff;
+    padding-left: 20px; /* Añade un padding a la izquierda para que el texto no esté pegado al borde */
+    padding-right: 20px; /* Añade un padding a la derecha para que el texto no esté pegado al borde */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Estilo del texto */
+.txt-nosotros {
+    font-family: 'Arapey', sans-serif;
+    font-size: 1rem;
+    color: #000; /* Párrafos en blanco dentro de la sección Nosotros */
+    margin-bottom: 15px; /* Espaciado entre los párrafos */
+    text-align: justify; /* Alineación justificada */
+    line-height: 1.6; /* Espaciado de las líneas para mejorar la lectura */
+    max-width: 100%; /* Asegura que el texto ocupe el máximo ancho posible */
+}
+
+/* Estilo del título */
+h2.txt-nosotros {
+    font-size: 2.5rem; /* Tamaño del título */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+
+
+/* Estilos para la página Nosotros */
+
+
+
+.page-nosotros nav, 
+.page-nosotros footer {
+    background-color: #4f1d27 !important; /* Vinotinto */
+    color: #fff !important; /* Letras blancas */
+}
+
+/* Estilos específicos para los links dentro del nav y footer */
+.page-nosotros nav a, 
+.page-nosotros footer a {
+    color: #fff !important; /* Texto de los links en blanco */
+}
+
+.nav-title-nosotros {
+    color: #fff !important; /* Forzar el color blanco */
+}
+
+
+.separador {
+    height: 2px; /* Grosor de la línea */
+    background-color: #4f1d27; /* Color vinotinto */
+    width: 80%; /* Ancho de la línea, ajustable */
+    margin: 40px auto; /* Espaciado arriba y abajo para separarla */
+    display: block; /* Asegura que se muestre correctamente */
+    opacity: 1;
+}
