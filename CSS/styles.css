@@ -54,6 +54,9 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1 1 calc(33.333% - 10px);
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .property-card:hover {
   transform: translateY(-5px);
@@ -72,15 +75,16 @@ body {
 .property-info {
   padding: 10px;
   text-align: center;
+  flex: 1;
 }
 .property-info h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #4f1d27;
   margin-bottom: 8px;
   letter-spacing: 3px;
 }
 .property-info p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #666;
   margin-bottom: 10px;
   letter-spacing: 3px;
@@ -97,6 +101,7 @@ body {
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
   letter-spacing: 3px;
+  margin-top: auto;
 }
 .property-button:hover {
   background-color: #3a151d;
@@ -115,10 +120,10 @@ body {
     max-width: 300px;
   }
   .property-info h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .property-info p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 /* NAV */
@@ -133,25 +138,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Logo */
-.logo img {
-  width: 120px;
-  height: auto;
-}
-
-/* Título centrado */
+/* Título */
 .navbar-brand {
   font-size: 1.3rem;
   font-weight: normal;
   color: #4f1d27;
   text-align: center;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  line-height: 1.2;
   letter-spacing: 5px;
+  flex: 1;
+}
+.navbar-brand span {
+  color: #000;
 }
 
 .navbar-brand:hover {
@@ -159,6 +156,12 @@ body {
 }
 
 /* Menú en pantallas grandes */
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .navbar-nav .nav-link {
   color: #4f1d27;
   font-weight: normal;
@@ -168,19 +171,31 @@ body {
   font-size: 1.5rem;
   letter-spacing: 0px;
 }
+.navbar-nav .nav-link:hover {
+  color: #000;
+}
 
-/* Cambia el color del menú cuando se despliega en pantallas pequeñas */
+/* Menú en pantallas pequeñas */
 @media (max-width: 992px) {
   .navbar-collapse {
     background-color: #4f1d27;
+    text-align: center;
   }
   .navbar-collapse .nav-link {
     color: #fff;
-    font-size: 1.4srem;
+    font-size: 1.4rem;
     font-weight: bolder;
   }
   .navbar-nav .nav-item {
     border-bottom: 2px solid #fff;
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-nav {
+    justify-content: flex-end;
   }
 }
 /*---------------------------PROPIEDADES---------------------------------*/
@@ -244,6 +259,7 @@ body {
   padding: 20px;
   margin-top: auto; /* Esto asegura que el footer se mantenga al final */
   box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .direccion-footer,
@@ -253,13 +269,31 @@ body {
   text-align: center;
 }
 
+.direccion-footer {
+  align-items: flex-start; /* Alinea a la izquierda */
+  margin-left: 20%; /* Centra entre el medio y la izquierda */
+}
+
+.contacto-footer {
+  align-items: flex-end; /* Alinea a la derecha */
+  margin-right: 20%; /* Centra entre el medio y la derecha */
+}
+
 .direccion-footer a,
 .contacto-footer a {
   text-decoration: none;
-  color: #4f1d27;
-  font-size: 1.5rem; /* Reduje el tamaño de la fuente */
+  color: #802929;
+  font-size: 1.5rem; /* Tamaño de la fuente */
   font-weight: normal; /* Bebas Neue no tiene variantes de peso */
-  letter-spacing: 3px; /* Reduje el espaciado entre letras */
+  letter-spacing: 0px; /* Espaciado entre letras */
+}
+
+/* Separador */
+.separator {
+  width: 4px; /* Aumenta el grosor del separador */
+  height: 50px;
+  background-color: #802929; /* Color vinotinto */
+  margin: 0 20px; /* Espaciado alrededor del separador */
 }
 
 /* Logo Footer */
@@ -269,6 +303,23 @@ body {
 }
 
 /* RESPONSIVE FOOTER */
+@media (max-width: 1200px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .direccion-footer,
+  .contacto-footer {
+    align-items: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin: 0; /* Elimina el margen lateral */
+  }
+  .separator {
+    width: 60%; /* Hace que el separador ocupe todo el ancho */
+    height: 4px; /* Aumenta el grosor del separador */
+    margin: 20px 0; /* Espaciado vertical */
+  }
+}
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -282,34 +333,18 @@ body {
   .logo-footer {
     margin-top: 10px; /* Espaciado arriba del logo en móviles */
   }
-}
-@media (min-width: 992px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .direccion-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
-    margin-left: 20%; /* Centra entre el medio y la izquierda */
-  }
-  .contacto-footer {
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right; /* Asegura que el texto esté alineado a la derecha */
-    margin-right: 20%; /* Centra entre el medio y la derecha */
-  }
-  .contacto-footer a {
-    font-size: 1.2rem; /* Reduce el tamaño de la fuente del email */
-    margin: 0 10px; /* Espaciado entre el teléfono y el email */
+  .separator {
+    display: block; /* Muestra el separador en pantallas pequeñas */
+    width: 60%; /* Hace que el separador ocupe todo el ancho */
+    height: 4px; /* Aumenta el grosor del separador */
+    margin: 20px 0; /* Espaciado vertical */
   }
 }
 @media (max-width: 622px) {
   .direccion-footer a,
   .contacto-footer a {
     font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-    letter-spacing: 1px; /* Reduce el espaciado entre letras */
+    letter-spacing: 0px; /* Reduce el espaciado entre letras */
     word-wrap: break-word; /* Permite que el texto pase a la línea siguiente si es necesario */
   }
 }
@@ -319,6 +354,9 @@ body {
     font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
     letter-spacing: 0.5px; /* Reduce aún más el espaciado entre letras */
     word-wrap: break-word; /* Permite que el texto pase a la línea siguiente si es necesario */
+  }
+  .separator {
+    margin: 10px 0; /* Reduce el margen vertical */
   }
 }
 /* Definir la fuente Bebas Neue */

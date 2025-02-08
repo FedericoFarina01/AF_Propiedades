@@ -10,6 +10,7 @@
     padding: 20px;
     margin-top: auto; /* Esto asegura que el footer se mantenga al final */
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .direccion-footer,
@@ -19,13 +20,31 @@
     text-align: center;
 }
 
+.direccion-footer {
+    align-items: flex-start; /* Alinea a la izquierda */
+    margin-left: 20%; /* Centra entre el medio y la izquierda */
+}
+
+.contacto-footer {
+    align-items: flex-end; /* Alinea a la derecha */
+    margin-right: 20%; /* Centra entre el medio y la derecha */
+}
+
 .direccion-footer a,
 .contacto-footer a {
     text-decoration: none;
-    color: #4f1d27;
-    font-size: 1.5rem; /* Reduje el tamaño de la fuente */
+    color: #802929;
+    font-size: 1.5rem; /* Tamaño de la fuente */
     font-weight: normal; /* Bebas Neue no tiene variantes de peso */
-    letter-spacing: 3px; /* Reduje el espaciado entre letras */
+    letter-spacing: 0px; /* Espaciado entre letras */
+}
+
+/* Separador */
+.separator {
+    width: 4px; /* Aumenta el grosor del separador */
+    height: 50px;
+    background-color: #802929; /* Color vinotinto */
+    margin: 0 20px; /* Espaciado alrededor del separador */
 }
 
 /* Logo Footer */
@@ -35,6 +54,26 @@
 }
 
 /* RESPONSIVE FOOTER */
+@media (max-width: 1200px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .direccion-footer,
+    .contacto-footer {
+        align-items: center;
+        text-align: center; /* Asegura que el texto esté centrado */
+        margin: 0; /* Elimina el margen lateral */
+    }
+
+    .separator {
+        width: 60%; /* Hace que el separador ocupe todo el ancho */
+        height: 4px; /* Aumenta el grosor del separador */
+        margin: 20px 0; /* Espaciado vertical */
+    }
+}
+
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
@@ -50,31 +89,12 @@
     .logo-footer {
         margin-top: 10px; /* Espaciado arriba del logo en móviles */
     }
-}
 
-@media (min-width: 992px) {
-    .footer {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .direccion-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left; /* Asegura que el texto esté alineado a la izquierda */
-        margin-left: 20%; /* Centra entre el medio y la izquierda */
-    }
-
-    .contacto-footer {
-        flex-direction: column;
-        align-items: flex-end;
-        text-align: right; /* Asegura que el texto esté alineado a la derecha */
-        margin-right: 20%; /* Centra entre el medio y la derecha */
-    }
-
-    .contacto-footer a {
-        font-size: 1.2rem; /* Reduce el tamaño de la fuente del email */
-        margin: 0 10px; /* Espaciado entre el teléfono y el email */
+    .separator {
+        display: block; /* Muestra el separador en pantallas pequeñas */
+        width: 60%; /* Hace que el separador ocupe todo el ancho */
+        height: 4px; /* Aumenta el grosor del separador */
+        margin: 20px 0; /* Espaciado vertical */
     }
 }
 
@@ -82,7 +102,7 @@
     .direccion-footer a,
     .contacto-footer a {
         font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-        letter-spacing: 1px; /* Reduce el espaciado entre letras */
+        letter-spacing: 0px; /* Reduce el espaciado entre letras */
         word-wrap: break-word; /* Permite que el texto pase a la línea siguiente si es necesario */
     }
 }
@@ -93,5 +113,9 @@
         font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
         letter-spacing: 0.5px; /* Reduce aún más el espaciado entre letras */
         word-wrap: break-word; /* Permite que el texto pase a la línea siguiente si es necesario */
+    }
+
+    .separator {
+        margin: 10px 0; /* Reduce el margen vertical */
     }
 }

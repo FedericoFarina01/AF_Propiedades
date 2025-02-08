@@ -54,6 +54,9 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; // Efecto hover
     flex: 1 1 calc(33.333% - 10px); // Ajusta el ancho de las tarjetas
     max-width: 400px; // Ancho máximo para evitar que se hagan muy anchas
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Asegura que el contenido ocupe toda la altura disponible
 
     &:hover {
         transform: translateY(-5px); // Efecto de levantar la tarjeta
@@ -73,16 +76,17 @@ body {
 .property-info {
     padding: 10px; // Reducimos el padding
     text-align: center;
+    flex: 1; // Asegura que el contenido ocupe toda la altura disponible
 
     h3 {
-        font-size: 1.4rem; // Tamaño del título
+        font-size: 1.2rem; // Tamaño del título
         color: #4f1d27; // Color vinotinto para el título
         margin-bottom: 8px; // Margen inferior
         letter-spacing: 3px; // Reduje el espaciado entre letras
     }
 
     p {
-        font-size: 0.9rem; // Tamaño de la descripción
+        font-size: 0.8rem; // Tamaño de la descripción
         color: #666; // Color gris para la descripción
         margin-bottom: 10px; // Margen inferior
         letter-spacing: 3px; // Reduje el espaciado entre letras
@@ -100,6 +104,7 @@ body {
     font-size: 0.9rem; // Tamaño de la fuente
     transition: background-color 0.3s ease;
     letter-spacing: 3px; // Reduje el espaciado entre letras
+    margin-top: auto; // Asegura que el botón esté al final del contenido
 
     &:hover {
         background-color: #3a151d; // Color más oscuro al hacer hover
@@ -122,11 +127,11 @@ body {
 
     .property-info {
         h3 {
-            font-size: 1.3rem; // Tamaño de fuente más pequeño en móviles
+            font-size: 1.1rem; // Tamaño de fuente más pequeño en móviles
         }
 
         p {
-            font-size: 0.9rem; // Tamaño de fuente más pequeño en móviles
+            font-size: 0.8rem; // Tamaño de fuente más pequeño en móviles
         }
     }
 }

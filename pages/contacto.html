@@ -43,12 +43,14 @@
 
       <main class="main-container">
         <div class="container mt-5">
-            <form action="mailto:afnegociosinmobiliarios@gmail.com" method="post" enctype="text/plain">
+            <!--!COMPLETAR FORMSPREE-->
+            <form action="https://formspree.io/f/manqbdpd" method="post">
+                <input type="hidden" name="_subject" value="Nueva consulta desde el formulario de contacto">
                 <div class="mb-3">
                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="NOMBRE" required>
                 </div>
                 <div class="mb-3">
-                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="TELÉFONO O CELULAR" required>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="TELÉFONO O CELULAR" required pattern="[0-9]{10}">
                 </div>
                 <div class="mb-3">
                     <input type="email" class="form-control" id="email" name="email" placeholder="E-MAIL" required>
