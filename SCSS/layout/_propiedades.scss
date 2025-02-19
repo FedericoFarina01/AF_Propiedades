@@ -17,28 +17,31 @@
     width: 100%; /* Asegura que ocupe todo el ancho */
     height: 50vh; /* Ajusta la altura */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Apila el contenido verticalmente */
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding-top: 20px; /* Espacio en la parte superior */
 }
 
 .text-content {
     color: white; /* Color del texto en la mitad derecha */
     text-align: center;
+    width: 100%; /* Asegura que el texto ocupe todo el ancho */
+    margin-bottom: 20px; /* Espacio entre el texto y el iframe */
 
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
+}
 
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
+.iframe-container {
+    width: 90%; /* Reducimos el ancho del contenedor del iframe */
+    max-width: 500px; /* Ancho máximo para el iframe */
+    text-align: center; /* Centra el iframe horizontalmente */
+    margin-top: 20px; /* Espacio entre el texto y el iframe */
+}
 
-    p {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
+.iframe-container iframe {
+    width: 100%; /* El iframe ocupa todo el ancho de su contenedor */
+    height: 200px; /* Altura reducida del iframe */
+    border: 0; /* Elimina el borde del iframe */
 }
 
 @media (min-width: 768px) {
@@ -49,5 +52,25 @@
     .left-half, .right-half {
         width: 50%; /* Ajusta el ancho a la mitad */
         height: 100vh; /* Asegura que ocupe toda la altura */
+    }
+
+    .right-half {
+        justify-content: center; /* Centra el contenido verticalmente */
+        padding-top: 0; /* Elimina el espacio superior */
+    }
+
+    .text-content {
+        margin-bottom: 20px; /* Espacio entre el texto y el iframe */
+        font-size: 1.5em; /* Aumenta el tamaño del texto */
+    }
+
+    .iframe-container {
+        margin-top: 0; /* Elimina el espacio superior */
+        width: 80%; /* Aumenta el ancho del contenedor del iframe */
+        max-width: 700px; /* Aumenta el ancho máximo del iframe */
+    }
+
+    .iframe-container iframe {
+        height: 300px; /* Aumenta la altura del iframe */
     }
 }
