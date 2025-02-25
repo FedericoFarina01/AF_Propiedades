@@ -74,3 +74,9 @@
         height: 300px; /* Aumenta la altura del iframe */
     }
 }
+
+@media (max-width: 767px) {
+    .iframe-container iframe {
+        margin-top: -40px; // Ajusta este valor según sea necesario
+    }
+}

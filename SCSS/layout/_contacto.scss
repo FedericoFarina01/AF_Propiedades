@@ -47,6 +47,12 @@ body.contacto-page {
 
 body.contacto-page .main-container {
     flex: 1;
+    min-height: 80vh; /* Reduce la altura mínima del contenedor principal */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding-top: 20px; /* Reduce el espacio superior */
+    padding-bottom: 20px; /* Reduce el espacio inferior */
 }
 
 body.contacto-page .footer {

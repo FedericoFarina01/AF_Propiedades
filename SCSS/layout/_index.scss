@@ -134,4 +134,48 @@ body {
             font-size: 0.8rem; // Tamaño de fuente más pequeño en móviles
         }
     }
+
+    .navbar-brand {
+        font-size: 1.2rem !important; // Tamaño de fuente para pantallas medianas
+        letter-spacing: 3px; // Reducir el espaciado entre letras para pantallas medianas
+    }
 }
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem !important; // Tamaño de fuente para pantallas pequeñas
+        letter-spacing: 2px; // Reducir el espaciado entre letras para pantallas pequeñas
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 0.9rem !important; // Tamaño de fuente para pantallas muy pequeñas
+        letter-spacing: 1px; // Reducir el espaciado entre letras para pantallas muy pequeñas
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar-brand {
+        font-size: 0.8rem !important; // Tamaño de fuente para pantallas extra pequeñas
+        letter-spacing: 0.5px; // Reducir el espaciado entre letras para pantallas extra pequeñas
+    }
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important; // Tamaño de fuente para pantallas grandes
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 4px; // Espaciado entre letras para pantallas grandes
+    width: 100%; // Asegura que el contenedor ocupe el ancho completo
+    display: flex;
+    justify-content: center; // Centra el contenido horizontalmente
+    flex-wrap: wrap; // Permite que el contenido se ajuste si es necesario
+
+    span {
+        display: block; // Hace que el texto "PROPIEDADES" se separe del anterior
+        width: 100%; // Fuerza un salto de línea
+        text-align: center; // Centra el texto del span
+    }
+}
+
