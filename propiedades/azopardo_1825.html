@@ -14,6 +14,26 @@
 
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="../CSS/styles.css">
+
+    <style>
+        .carousel-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto; /* Adds vertical and horizontal margins */
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        @media (max-width: 767px) {
+            .carousel-container {
+                width: 80%;
+                max-width: 600px;
+                margin: 20px auto; /* Ensures the same behavior on smaller screens */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -48,8 +68,33 @@
     <main class="main-container-propiedades">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 left-half">
-                    <!-- Contenido de la mitad izquierda (puede estar vacío o tener contenido) -->
+                <div class="col-md-6 left-half d-flex justify-content-center align-items-center">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-container">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../imagenes/Azopardo 1825.jpeg" class="d-block" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../imagenes/Crisologo Larralde 1579.jpeg" class="d-block" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="col-md-6 right-half">
                     <div class="text-content">
@@ -59,7 +104,7 @@
                         <p>(ESTADO)</p>
                     </div>
                     <div class="iframe-container mt-3">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.3171959364595!2d-58.6296023790775!3d-34.64669146993537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8a725b0326f%3A0x24ca1cc67ab77f3d!2sCris%C3%B3logo%20Larralde%201579%2C%20B1712BMC%20Castelar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1739997836499!5m2!1ses!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.187858471363!2d-58.634089723416096!3d-34.64995835994321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc75889d84e37%3A0x78dc80876bf9e183!2sJuan%20B.%20Azopardo%201825%2C%20B1712BWE%20Castelar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1740683497092!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -72,6 +117,8 @@
             <p><a href="https://www.google.com/maps/place/Gral.+Lavalle+1060"><b>LAVALLE 1060</b></a></p>
             <p><a href="https://www.google.com/maps/place/Gral.+Lavalle+1060">ITUZAINGÓ NORTE</a></p>
         </div>
+
+        <div class="separator"></div> <!-- Separador -->
 
         <div class="contacto-footer">
             <p><a href="tel:1137610702"><b>+54 9 11 3761-0702</b></a></p>

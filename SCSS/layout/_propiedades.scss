@@ -10,6 +10,27 @@
     background-color: #fff; /* Color de la mitad izquierda */
     width: 100%; /* Asegura que ocupe todo el ancho */
     height: 50vh; /* Ajusta la altura */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.carousel-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto; /* Adds vertical and horizontal margins */
+}
+
+.carousel-inner {
+    width: 100%; /* Asegura que el carrusel ocupe el 100% del ancho */
+    height: 100%; /* Asegura que el carrusel ocupe el 100% de la altura disponible */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
 }
 
 .right-half {
@@ -28,7 +49,6 @@
     text-align: center;
     width: 100%; /* Asegura que el texto ocupe todo el ancho */
     margin-bottom: 20px; /* Espacio entre el texto y el iframe */
-
 }
 
 .iframe-container {
@@ -76,7 +96,12 @@
 }
 
 @media (max-width: 767px) {
+    .carousel-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto; /* Ensures the same behavior on smaller screens */
+    }
     .iframe-container iframe {
-        margin-top: -40px; // Ajusta este valor según sea necesario
+        margin-top: -40px; /* Ajusta este valor según sea necesario */
     }
 }
