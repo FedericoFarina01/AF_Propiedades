@@ -326,6 +326,10 @@ body {
   .iframe-container iframe {
     height: 300px; /* Aumenta la altura del iframe */
   }
+  .descripcion {
+    background-color: white; /* White background */
+    color: #000000; /* Black text */
+  }
 }
 @media (max-width: 767px) {
   .carousel-container {
@@ -336,7 +340,16 @@ body {
   .iframe-container iframe {
     margin-top: -40px; /* Ajusta este valor según sea necesario */
   }
+  .descripcion {
+    background-color: #4f1d27; /* Vinotinto background */
+    color: white; /* White text */
+  }
 }
+.descripcion {
+  text-align: justify; /* Justify text */
+  padding: 2rem 2rem; /* Add padding on the sides */
+}
+
 /* FOOTER */
 .footer {
   width: 100%;
