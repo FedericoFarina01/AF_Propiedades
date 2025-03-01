@@ -302,6 +302,18 @@ body {
   border: 0; /* Elimina el borde del iframe */
 }
 
+.button-container .btn-custom {
+  background-color: white;
+  color: #4f1d27;
+  border: 1px solid #4f1d27;
+  margin-right: 10px;
+}
+
+.button-container .btn-custom:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .main-container-propiedades {
     flex-direction: row; /* Cambia la dirección del flex a fila en pantallas más grandes */
@@ -330,6 +342,13 @@ body {
     background-color: white; /* White background */
     color: #000000; /* Black text */
   }
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .button-container .btn-custom {
+    margin-right: 10px;
+  }
 }
 @media (max-width: 767px) {
   .carousel-container {
@@ -343,6 +362,14 @@ body {
   .descripcion {
     background-color: #4f1d27; /* Vinotinto background */
     color: white; /* White text */
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-container .btn-custom {
+    margin-bottom: 10px;
   }
 }
 .descripcion {
